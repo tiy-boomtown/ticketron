@@ -1,28 +1,19 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Features / stories still to do
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+* Can assign issues to developers
+  * Need to be able to create, update, delete developer entries
+* Can comment on issues
+* Record who posted an issue
+  * Must be logged in to post an issue
+* Can edit issue status / titles / descriptions
+  * Only team members or the poster (not any user)
+* Can view list of all issues
+  * Filter all / open / closed
+* Can view only the issues assigned to me
+* Track read / unread comments
+  * Can jump to unread replies
+* Track history of issues
+  * Record who made each change, and what changed
+* Add issue search
