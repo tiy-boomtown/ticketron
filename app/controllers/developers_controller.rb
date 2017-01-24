@@ -4,7 +4,7 @@ class DevelopersController < ApplicationController
   end
 
   def show
-    @developer = Developer.find params[:id]
+    @devloper = Developer.find params[:id]
   end
 
   def new
