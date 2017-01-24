@@ -1,0 +1,9 @@
+<h2><%= @developer.name %></h2>
+
+<% if @developer.retired? %>
+    <p>Retired at <%= @developer.retired_at %></p>
+<% else %>
+    <%= form_tag "/developers/#{@developer.id}/retire" do %>
+        <button>Retire</button>
+    <% end %>
+<% end %>

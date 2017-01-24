@@ -11,6 +11,13 @@ Rails.application.routes.draw do
 
   get '/' => 'issues#new'
 
+  # Developers
+  get '/developers' => 'developers#index'
+  get '/developers/new' => 'developers#new'
+  post '/developers' => 'developers#create'
+  delete '/developers/:developer_id' => 'developers#remove'
+  get '/developers/:id' => 'developers#show'
+
   # root 'issues#new'
 
   # The priority is based upon order of creation: first created -> highest priority.

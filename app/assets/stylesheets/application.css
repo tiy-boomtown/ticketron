@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+.navbar-links li {
+    display: inline-block;
+}
+
+.error {
+    border: 1px solid red;
+}

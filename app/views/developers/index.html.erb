@@ -1,0 +1,29 @@
+<h1>Developers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Retired?</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @developers.each do |dev| %>
+      <tr>
+        <td>
+          <a href="/developers/<%= dev.id %>">
+            <%= dev.id %>
+          </a>
+        </td>
+        <td><%= dev.name %></td>
+        <td><%= dev.retired? %></td>
+      </tr>
+    <% end %>
+    <tr>
+      <td>
+        <a href="/developers/new">Add Developer</a>
+      </td>
+    </tr>
+  </tbody>
+</table>
