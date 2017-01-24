@@ -11,12 +11,18 @@
   <%= User.count %> users
 </p>
 <p>
-  You are <%= current_user.email %>
+  <% if current_user != nil %>
+    You are <%= current_user.email %>
 
-  <a href="/users/edit">Edit my profile</a>
-  <a href="http://www.google.com">Go to Google</a>
+    <a href="/users/edit">Edit my profile</a>
+    <a href="http://www.google.com">Go to Google</a>
 
-  <%= form_tag "/users/sign_out", method: :delete do %>
-    <button>Sign Out</button>
+    <%= form_tag "/users/sign_out", method: :delete do %>
+      <button>Sign Out</button>
+    <% end %>
+
+  <% else %>
+      <p>You are not logged in</p>
+      <a href="/users/sign_in">Log in!</a>
   <% end %>
 </p>
