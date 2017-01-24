@@ -1,7 +1,33 @@
 <h1>All Issues</h1>
 
+<a href="/issues/new">Add Issue</a>
+
+<!--
 <ul>
   <% @issues.each do |issue| %>
     <li><%= issue.title %></li>
   <% end %>
 </ul>
+-->
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Created</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @issues.each do |i| %>
+      <tr>
+        <td>
+          <!-- <%= link_to i.title, "/issues/#{i.id}" %> -->
+          <a href="/issues/<%= i.id %>">
+            <%= i.title %>
+          </a>
+        </td>
+        <td><%= i.created_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

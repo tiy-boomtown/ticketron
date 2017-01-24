@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get '/issues/new' => 'issues#new'
   post '/issues' => 'issues#create'
 
+  get '/issues/:id' => 'issues#show'
+
   # get '/issues' => 'issues#index'
   get '/all' => 'issues#all'
 

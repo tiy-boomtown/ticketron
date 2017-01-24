@@ -12,6 +12,14 @@ class IssuesController < ApplicationController
   end
 
   def all
-    @issues = Issue.all
+    if params[:closed]
+      @issues = Issue.where(status: "closed")
+    else
+      @issues = Issue.all
+    end
+  end
+
+  def show
+    @issue = Issue.find params[:id]
   end
 end
