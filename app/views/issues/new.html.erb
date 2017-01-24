@@ -10,3 +10,13 @@
   There are <%= Issue.count %> issues in the database, and
   <%= User.count %> users
 </p>
+<p>
+  You are <%= current_user.email %>
+
+  <a href="/users/edit">Edit my profile</a>
+  <a href="http://www.google.com">Go to Google</a>
+
+  <%= form_tag "/users/sign_out", method: :delete do %>
+    <button>Sign Out</button>
+  <% end %>
+</p>
