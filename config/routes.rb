@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/all' => 'issues#all'
 
   get '/' => 'issues#new'
+
   # root 'issues#new'
 
   # The priority is based upon order of creation: first created -> highest priority.
