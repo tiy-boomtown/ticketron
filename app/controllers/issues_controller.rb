@@ -10,4 +10,8 @@ class IssuesController < ApplicationController
 
     redirect_to '/'
   end
+
+  def all
+    @issues = Issue.all
+  end
 end

@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   get '/issues/new' => 'issues#new'
   post '/issues' => 'issues#create'
 
+  # get '/issues' => 'issues#index'
+  get '/all' => 'issues#all'
+
   get '/' => 'issues#new'
   # root 'issues#new'
 
