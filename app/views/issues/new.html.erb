@@ -28,5 +28,11 @@
 </p>
 
 <%= form_tag "/issues" do %>
+  <p>Title</p>
+  <input type="text" name="label">
+
+  <p>Description</p>
+  <input type="text" name="contents">
+
   <button>Create Issue</button>
 <% end %>
