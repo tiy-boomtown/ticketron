@@ -8,6 +8,9 @@ class Issue < ActiveRecord::Base
 
   belongs_to :reporter, class_name: 'User'
 
+  # Would generate a `user` method instead -
+  # belongs_to :user, foreign_key: :reporter_id
+
   # def assignee
   #   Developer.find assignee_id
   # end
