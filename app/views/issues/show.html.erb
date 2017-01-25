@@ -10,7 +10,7 @@
       <% if @issue.assignee_id == nil %>
           <option></option>
       <% end %>
-      <% Developer.all.each do |dev| %>
+      <% Developer.active.each do |dev| %>
         <option value="<%= dev.id %>" <%= dev.id == @issue.assignee_id ? 'selected' : '' %>>
           <%= dev.name %>
         </option>

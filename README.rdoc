@@ -2,7 +2,6 @@
 
 Features / stories still to do
 
-* Can assign issues to developers
 * Can comment on issues
 * Record who posted an issue
   * Must be logged in to post an issue
