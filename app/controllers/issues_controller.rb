@@ -31,4 +31,14 @@ class IssuesController < ApplicationController
 
     redirect_to "/issues/#{issue.id}"
   end
+
+  def follow
+    Follower.where(
+      user_id:  current_user.id,
+      issue_id: params[:id]
+    ).first_or_create
+
+    # redirect_to :back
+    redirect_to "/issues/#{params[:id]}"
+  end
 end

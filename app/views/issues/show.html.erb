@@ -5,6 +5,10 @@
 <!-- <p>Followers: <%= Follower.where(issue_id: @issue.id).count %></p> -->
 <p>Followers: <%= @issue.followers.count %></p>
 
+<%= form_tag "/issues/#{@issue.id}/follow" do %>
+  <button class="btn btn-default">+ Follow</button>
+<% end %>
+
 <p><%= @issue.description %></p>
 
 <%= form_tag "/issues/#{@issue.id}/assign", method: :patch do %>
