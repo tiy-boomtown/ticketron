@@ -29,5 +29,9 @@
 
 <%= yield %>
 
+<% if Rails.env.development? %>
+  <p><%= params[:controller] %>#<%= params[:action] %></p>
+<% end %>
+
 </body>
 </html>

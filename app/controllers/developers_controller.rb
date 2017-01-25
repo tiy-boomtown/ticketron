@@ -4,7 +4,7 @@ class DevelopersController < ApplicationController
   end
 
   def show
-    @devloper = Developer.find params[:id]
+    @developer = Developer.find params[:id]
   end
 
   def new
@@ -24,7 +24,7 @@ class DevelopersController < ApplicationController
   end
 
   def remove
-    dev = Developer.find params[:id]
+    dev = Developer.find params[:developer_id]
     dev.retire
     redirect_to '/developers'
   end
