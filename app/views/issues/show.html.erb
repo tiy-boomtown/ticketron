@@ -31,3 +31,11 @@
     <input type="hidden" name="issue_id" value="<%= @issue.id %>">
     <button class="btn btn-default">Post</button>
 <% end %>
+
+<% @issue.comments.each do |c| %>
+    <div class="well">
+      <strong><%= c.poster.email %></strong>
+      <p><%= time_ago_in_words c.created_at %> ago</p>
+      <p><%= c.contents %></p>
+    </div>
+<% end %>

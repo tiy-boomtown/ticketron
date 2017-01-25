@@ -5,7 +5,6 @@ class Issue < ActiveRecord::Base
   # def reporter
   #   User.find reporter_id
   # end
-
   belongs_to :reporter, class_name: 'User'
 
   # Would generate a `user` method instead -
@@ -15,4 +14,6 @@ class Issue < ActiveRecord::Base
   #   Developer.find assignee_id
   # end
   belongs_to :assignee, class_name: 'Developer'
+
+  has_many :comments
 end
