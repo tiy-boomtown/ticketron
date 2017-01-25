@@ -3,4 +3,8 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  def is_following?(issue)
+    Follower.find_by(user_id: id, issue_id: issue.id) != nil
+  end
 end

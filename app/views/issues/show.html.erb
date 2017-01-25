@@ -5,8 +5,14 @@
 <!-- <p>Followers: <%= Follower.where(issue_id: @issue.id).count %></p> -->
 <p>Followers: <%= @issue.followers.count %></p>
 
-<%= form_tag "/issues/#{@issue.id}/follow" do %>
-  <button class="btn btn-default">+ Follow</button>
+<% if current_user.is_following?(@issue) %>
+  <%= form_tag "/issues/#{@issue.id}/follow", method: :delete do %>
+      <button class="btn btn-danger">- Unfollow</button>
+  <% end %>
+<% else %>
+  <%= form_tag "/issues/#{@issue.id}/follow" do %>
+    <button class="btn btn-default">+ Follow</button>
+  <% end %>
 <% end %>
 
 <p><%= @issue.description %></p>

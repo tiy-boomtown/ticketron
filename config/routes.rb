@@ -12,6 +12,7 @@ Rails.application.routes.draw do
 
   get '/' => 'issues#new'
   post '/issues/:id/follow' => 'issues#follow'
+  delete '/issues/:id/follow' => 'issues#unfollow'
 
   # Developers
   get '/developers' => 'developers#index'

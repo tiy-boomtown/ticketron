@@ -41,4 +41,13 @@ class IssuesController < ApplicationController
     # redirect_to :back
     redirect_to "/issues/#{params[:id]}"
   end
+
+  def unfollow
+    Follower.where(
+        user_id:  current_user.id,
+        issue_id: params[:id]
+    ).delete_all
+
+    redirect_to "/issues/#{params[:id]}"
+  end
 end
