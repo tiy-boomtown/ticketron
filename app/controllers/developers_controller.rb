@@ -11,10 +11,9 @@ class DevelopersController < ApplicationController
   end
 
   def create
-    name = params[:full_name]
-    if name
+    if params[:full_name].present?
       dev = Developer.new
-      dev.name = name
+      dev.name = params[:full_name]
       dev.save
 
       redirect_to "/developers/#{dev.id}"
