@@ -2,9 +2,9 @@
 
 Features / stories still to do
 
-* Can comment on issues
 * Record who posted an issue
   * Must be logged in to post an issue
+* Can comment on issues
 * Can edit issue status / titles / descriptions
   * Only team members or the poster (not any user)
 * Can view list of all issues

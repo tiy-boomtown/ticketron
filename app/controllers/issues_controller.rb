@@ -5,7 +5,8 @@ class IssuesController < ApplicationController
   def create
     Issue.create(
         title:       params[:label],
-        description: params[:contents]
+        description: params[:contents],
+        reporter_id: current_user.id
     )
 
     redirect_to '/'
