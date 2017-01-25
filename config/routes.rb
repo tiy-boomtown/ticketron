@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post '/issues' => 'issues#create'
 
   get '/issues/:id' => 'issues#show'
+  patch '/issues/:id/assign' => 'issues#assign'
 
   # get '/issues' => 'issues#index'
   get '/all' => 'issues#all'

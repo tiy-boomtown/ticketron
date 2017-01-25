@@ -22,4 +22,12 @@ class IssuesController < ApplicationController
   def show
     @issue = Issue.find params[:id]
   end
+
+  def assign
+    issue = Issue.find params[:id]
+    issue.assignee_id = params[:developer_id]
+    issue.save
+
+    redirect_to "/issues/#{issue.id}"
+  end
 end

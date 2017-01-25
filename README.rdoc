@@ -3,7 +3,6 @@
 Features / stories still to do
 
 * Can assign issues to developers
-  * Need to be able to create, update, delete developer entries
 * Can comment on issues
 * Record who posted an issue
   * Must be logged in to post an issue

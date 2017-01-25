@@ -3,3 +3,23 @@
 <h1><%= @issue.title %></h1>
 
 <p><%= @issue.description %></p>
+
+<%= form_tag "/issues/#{@issue.id}/assign", method: :patch do %>
+    <!-- <input type="number" name="developer_id"> -->
+    <select name="developer_id" class="form-control">
+      <% if @issue.assignee_id == nil %>
+          <option></option>
+      <% end %>
+      <% Developer.all.each do |dev| %>
+        <option value="<%= dev.id %>" <%= dev.id == @issue.assignee_id ? 'selected' : '' %>>
+          <%= dev.name %>
+        </option>
+      <% end %>
+    </select>
+
+    <button class="btn btn-default">Assign</button>
+<% end %>
+
+<% if @issue.assignee %>
+  <p>Assigned to <%= @issue.assignee.name %></p>
+<% end %>
