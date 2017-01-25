@@ -28,7 +28,9 @@
   <li><a href="/developers">Developers</a></li>
 </ul>
 
-<%= yield %>
+<div class="container">
+  <%= yield %>
+</div>
 
 <% if Rails.env.development? %>
   <p><%= params[:controller] %>#<%= params[:action] %></p>

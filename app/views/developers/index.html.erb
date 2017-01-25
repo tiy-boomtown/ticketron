@@ -1,6 +1,6 @@
 <h1>Developers</h1>
 
-<table>
+<table class="table table-striped table-hover table-condensed table-bordered">
   <thead>
     <tr>
       <th>ID</th>
@@ -17,7 +17,13 @@
           </a>
         </td>
         <td><%= dev.name %></td>
-        <td><%= dev.retired? %></td>
+        <td>
+          <% if dev.retired? %>
+              <span class="glyphicon glyphicon-ok"></span>
+          <% else %>
+              <span class="glyphicon glyphicon-remove"></span>
+          <% end %>
+        </td>
       </tr>
     <% end %>
     <tr>
