@@ -2,6 +2,9 @@
 
 <h1><%= @issue.title %></h1>
 
+<!-- <p>Followers: <%= Follower.where(issue_id: @issue.id).count %></p> -->
+<p>Followers: <%= @issue.followers.count %></p>
+
 <p><%= @issue.description %></p>
 
 <%= form_tag "/issues/#{@issue.id}/assign", method: :patch do %>

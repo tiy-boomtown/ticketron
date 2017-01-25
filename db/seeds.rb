@@ -12,3 +12,26 @@ Developer.create([
     { name: 'James' },
     { name: 'Kylie' }
 ])
+
+10.times do
+  User.create!(
+    email:    Faker::Internet.email,
+    password: Faker::LordOfTheRings.character + Faker::Pokemon.name + rand(100 .. 999).to_s
+  )
+end
+
+users = User.all
+50.times do
+  issue = Issue.create!(
+    reporter:    users.sample,
+    title:       Faker::Company.catch_phrase,
+    description: Faker::Hipster.paragraph
+  )
+
+  5.times do
+    issue.comments.create!(
+      poster:   users.sample,
+      contents: Faker::TwinPeaks.quote
+    )
+  end
+end

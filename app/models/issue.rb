@@ -16,4 +16,5 @@ class Issue < ActiveRecord::Base
   belongs_to :assignee, class_name: 'Developer'
 
   has_many :comments
+  has_many :followers
 end
